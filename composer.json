@@ -1,0 +1,49 @@
+{
+	"type": "wordpress-plugin",
+	"name": "docalist/docalist-duplicate",
+	"description": "Docalist Duplicate.",
+    "homepage": "https://docalist.org/",
+	"license": "GPL-2.0-or-later",
+
+	"authors": [ 
+        {
+            "name": "Daniel Ménard",
+            "email": "daniel.menard@laposte.net",
+            "homepage": "https://docalist.org/"
+        }
+    ],
+
+	"keywords": [
+		"docalist"
+	],
+    
+    "support": {
+        "issues": "https://github.com/docalist/docalist/issues",
+        "forum": "https://groups.google.com/forum/#!forum/docalist-discuss"
+    },
+    
+	"require": {
+		"php": ">=7.2",
+		"composer/installers": "~1.0"
+	},
+    "autoload" : {
+        "psr-4" : {
+            "Docalist\\Duplicate\\" : "class"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "Docalist\\Duplicate\\Tests\\" : "tests"
+        }
+    },
+    "config" : {
+        "sort-packages" : true,
+        "optimize-autoloader" : true,
+        "classmap-authoritative" : true
+    },
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "1.1-dev"
+        }
+    }
+}
