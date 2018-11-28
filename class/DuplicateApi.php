@@ -50,8 +50,11 @@ final class DuplicateApi
     /**
      * Teste si le post passé en paramètre est duplicable.
      *
-     * Le post est duplicable s'il s'agit d'une notice docalist et que l'utilisateur dispose des droits requis
-     * pour créer une nouvelle notice dans la base docalist du post d'origine.
+     * Le post est duplicable si les conditions suivantes sont remplies :
+     *
+     * - il s'agit d'une notice docalist,
+     * - il n'est pas en statut "auto-draft",
+     * - l'utilisateur dispose des droits requis.
      *
      * @param WP_Post $post
      *
@@ -59,7 +62,9 @@ final class DuplicateApi
      */
     public function isDuplicable(WP_Post $post): bool
     {
-        return $this->isDocalistPost($post) && $this->currentUserCanDuplicate($post);
+        return $this->isDocalistPost($post)
+            && ($post->post_status !== 'auto-draft')
+            && $this->currentUserCanDuplicate($post);
     }
 
     /**
