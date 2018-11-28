@@ -168,8 +168,14 @@ final class DuplicateApi
         // La nouvelle notice est un "brouillon auto"
         $record->status = 'auto-draft';
 
+        // Permet aux autres de modifier le clone ou de faire quelque chose avant l'enregistrement (pas d'ID)
+        do_action('docalist_duplicate_before_save', $record);
+
         // Enregistre la nouvelle entité
         $database->save($record);
+
+        // Permet aux autres de modifier le clone ou de faire quelque chose après l'enregistrement (on a un ID)
+        do_action('docalist_duplicate_after_save', $record);
 
         // Retourne l'ID de la nouvelle entité
         return $record->getID();
