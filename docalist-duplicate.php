@@ -12,7 +12,7 @@
  * Description: Duplication de notices Docalist.
  * Version:     1.2.0-dev
  * Author:      Daniel Ménard
- * Author URI:  http://docalist.org/
+ * Author URI:  https://docalist.org/
  * Text Domain: docalist-duplicate
  * Domain Path: /languages
  *
