@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 /**
  * This file is part of Docalist Duplicate.
  *
@@ -18,6 +18,8 @@
  *
  * @author Daniel Ménard <daniel.menard@laposte.net>
  */
+declare(strict_types=1);
+
 namespace Docalist\Duplicate;
 
 use Docalist\Duplicate\DuplicatePlugin;
