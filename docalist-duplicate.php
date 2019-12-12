@@ -10,7 +10,7 @@
  * Plugin Name: Docalist Duplicate
  * Plugin URI:  https://docalist.org/
  * Description: Duplication de notices Docalist.
- * Version:     1.2.0-dev
+ * Version:     1.2.0
  * Author:      Daniel Ménard
  * Author URI:  https://docalist.org/
  * Text Domain: docalist-duplicate
@@ -29,7 +29,7 @@ use Docalist\AdminNotices;
 /**
  * Version du plugin.
  */
-define('DOCALIST_DUPLICATE_VERSION', '1.2.0-dev'); // Garder synchro avec la version indiquée dans l'entête
+define('DOCALIST_DUPLICATE_VERSION', '1.2.0'); // Garder synchro avec la version indiquée dans l'entête
 
 /**
  * Path absolu du répertoire dans lequel le plugin est installé.
