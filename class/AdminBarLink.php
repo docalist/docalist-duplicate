@@ -43,7 +43,7 @@ final class AdminBarLink
      */
     public function initialize(): void
     {
-        add_filter(
+        add_action(
             'admin_bar_menu',
             function (WP_Admin_Bar $adminBar): void {
                 $post = is_admin() ? $this->getPostInAdmin() : $this->getPostOnFront();

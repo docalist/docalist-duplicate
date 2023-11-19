@@ -42,7 +42,7 @@ final class Metabox
      */
     public function initialize(): void
     {
-        add_filter(
+        add_action(
             'add_meta_boxes',
             function (string $postType, WP_Post $post): void {
                 if (! $this->controller->getApi()->isDuplicable($post)) {
